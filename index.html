@@ -12,8 +12,8 @@
         <nav>
             <div><h2>Library System</h2></div>
             <div class="menu">
-                <div class="menuitem"><i class="fa fa-book" aria-hidden="true"></i> Books</div>
-                <div class="menuitem"><i class="fa fa-user" aria-hidden="true"></i> Register</div>
+                <div class="menuitem" onclick="document.getElementsByClassName('card')[0].scrollIntoView({ behavior: 'smooth', block: 'start' });"><i class="fa fa-book" aria-hidden="true" ></i> Books</div>
+                <div class="menuitem" onclick="document.getElementsByClassName('card')[1].scrollIntoView({ behavior: 'smooth', block: 'start' });"><i class="fa fa-user" aria-hidden="true"></i> Register</div>
                 <div class="menuitem"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</div>
                 <div class="menuitem"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</div>
             </div>
@@ -36,46 +36,6 @@
                             <td>1.</td>
                             <td>
                                 <a href="JayenKahan.com" target="_blank">क से कबूतर</a>
-                                <table border>
-                                    <tr>
-                                        <td>Publication Date: 24/06/2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Page Count: 20</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Book Price: 15</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td>tdht</td>
-                            <td>hgfhg</td>
-                            <td>vhgfhg</td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>
-                                <a href="JayenKahan.com" target="_blank">क से कबूतर</a>
-                                <table border>
-                                    <tr>
-                                        <td>Publication Date: 24/06/2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Page Count: 20</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Book Price: 15</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td>dfg</td>
-                            <td>gdhfnf</td>
-                            <td>ghgf</td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>
-                                <a href="JayenKahan.com" target="_blank">क से कबूतर</a>
                                 <table>
                                     <tr>
                                         <td>Publication Date: 24/06/2023</td>
@@ -88,9 +48,89 @@
                                     </tr>
                                 </table>
                             </td>
-                            <td>dhbghnfg</td>
-                            <td>ghgfh</td>
-                            <td>ghgfhf</td>
+                            <td>Adhyay Chand</td>
+                            <td>Kids Education</td>
+                            <td>65 (available)</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>
+                                <a href="JayenKahan.com" target="_blank">अ से आम</a>
+                                <table>
+                                    <tr>
+                                        <td>Publication Date: 23/05/2022 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page Count: 20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Book Price: 30</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>Ramanand Shastri</td>
+                            <td>Kids Education</td>
+                            <td>23 (Available)</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>
+                                <a href="JayenKahan.com" target="_blank">A for apple</a>
+                                <table>
+                                    <tr>
+                                        <td>Publication Date: 22/04/2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page Count: 19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Book Price: 25</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>Sam Singh Peternand</td>
+                            <td>Kids Education</td>
+                            <td>9 (less available)</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>
+                                <a href="JayenKahan.com" target="_blank">1 2 3 4(गिनती)</a>
+                                <table>
+                                    <tr>
+                                        <td>Publication Date: 21/03/2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page Count: 30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Book Price: 11.5</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>Sanket Ram</td>
+                            <td>Kids Education</td>
+                            <td>106 (available)</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>
+                                <a href="JayenKahan.com" target="_blank">बारहखड़ी</a>
+                                <table>
+                                    <tr>
+                                        <td>Publication Date: 20/02/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page Count: 27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Book Price: 35</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>Ram BhadraCharya</td>
+                            <td>Kids Education</td>
+                            <td>3 (less available)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -99,16 +139,14 @@
             <div class="card">
                 <h3>Register</h3>
                 <form class="register" method="GET" action="#" onsubmit="return submitForm()">
-                    <div class="input-group">
                     <label for="Fname">Given Name</label><br>
-                    <input type="text" required name="Fname" placeholder="Type your first name">
-                    </div><br>
+                    <input type="text" required name="Fname" placeholder="Type your first name"><br>
                     <label for="Lname">Family Name</label><br>
                     <input type="text" name="Lname" required placeholder="Type your last name"><br>
                     <label for="dob">Date of Birth</label><br>
                     <input type="date" name="dob" required onchange="calculateAge(this)"><br>
                     <label for="age">Age</label><br>
-                    <input type="number" name="age" min="15" placeholder="age in years" readonly><br>
+                    <input type="number" name="age" placeholder="age in years" readonly><br>
                     <label for="email">Email</label><br>
                     <input type="email" name="email" required placeholder="you@domain.com"><br>
                     <label for="pass">Password</label><br>
@@ -137,14 +175,19 @@
                 var ageInputs = document.getElementsByName('age');
                 if (ageInputs.length > 0) {
                     if(age) {
-                        if(age > 0) {
+                        if(age >= 5 && age<=100) {
+                            ageInputs[0].style.border = "1px solid black";
                             ageInputs[0].value = age;
                             ageInputs[0].readOnly = true;
                         } else {
+                            ageInputs[0].style.border = "1px solid red";
+                            ageInputs[0].value = 0;
                             ageInputs[0].readOnly = false;
                         }
                     }
                     else {
+                        ageInputs[0].style.border = "1px solid red";
+                        ageInputs[0].value = 0;
                         ageInputs[0].readOnly = false;
                     }
                 }
