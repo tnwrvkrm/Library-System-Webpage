@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Library System</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <nav>
+            <div><h2>Library System</h2></div>
+            <div class="menu">
+                <div class="menuitem"><i class="fa fa-book" aria-hidden="true"></i> Books</div>
+                <div class="menuitem"><i class="fa fa-user" aria-hidden="true"></i> Register</div>
+                <div class="menuitem"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</div>
+                <div class="menuitem"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</div>
+            </div>
+        </nav>
+        <main>
+            <div class="card">
+                <table>
+                    <h3>Books</h3>
+                    <thead>
+                        <tr>
+                            <th>Book ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Genre</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>
+                                <a href="JayenKahan.com" target="_blank">क से कबूतर</a>
+                                <table border>
+                                    <tr>
+                                        <td>Publication Date: 24/06/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page Count: 20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Book Price: 15</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>tdht</td>
+                            <td>hgfhg</td>
+                            <td>vhgfhg</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>
+                                <a href="JayenKahan.com" target="_blank">क से कबूतर</a>
+                                <table border>
+                                    <tr>
+                                        <td>Publication Date: 24/06/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page Count: 20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Book Price: 15</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>dfg</td>
+                            <td>gdhfnf</td>
+                            <td>ghgf</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>
+                                <a href="JayenKahan.com" target="_blank">क से कबूतर</a>
+                                <table>
+                                    <tr>
+                                        <td>Publication Date: 24/06/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page Count: 20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Book Price: 15</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>dhbghnfg</td>
+                            <td>ghgfh</td>
+                            <td>ghgfhf</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>Register</h3>
+                <form class="register" method="GET" action="#" onsubmit="return submitForm()">
+                    <div class="input-group">
+                    <label for="Fname">Given Name</label><br>
+                    <input type="text" required name="Fname" placeholder="Type your first name">
+                    </div><br>
+                    <label for="Lname">Family Name</label><br>
+                    <input type="text" name="Lname" required placeholder="Type your last name"><br>
+                    <label for="dob">Date of Birth</label><br>
+                    <input type="date" name="dob" required onchange="calculateAge(this)"><br>
+                    <label for="age">Age</label><br>
+                    <input type="number" name="age" min="15" placeholder="age in years" readonly><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" required placeholder="you@domain.com"><br>
+                    <label for="pass">Password</label><br>
+                    <input type="password" name="pass" required placeholder="secure_you"><br>
+                    <label for="ConfPass"> Confirm Password</label><br>
+                    <input type="password" name="ConfPass" required placeholder="Type the same password">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+
+        <script>
+            function calculateAge(dateInput) {
+                var dob = new Date(dateInput.value);
+                var today = new Date();
+                age = today - dob
+                var years = (today.getFullYear() - dob.getFullYear());
+
+                if (today.getMonth() < dob.getMonth() || 
+                    today.getMonth() == dob.getMonth() && today.getDate() < dob.getDate()) {
+                    years--;
+                }
+
+                age =  years;
+        
+                var ageInputs = document.getElementsByName('age');
+                if (ageInputs.length > 0) {
+                    if(age) {
+                        if(age > 0) {
+                            ageInputs[0].value = age;
+                            ageInputs[0].readOnly = true;
+                        } else {
+                            ageInputs[0].readOnly = false;
+                        }
+                    }
+                    else {
+                        ageInputs[0].readOnly = false;
+                    }
+                }
+            }
+
+            function submitForm() {
+                var form = document.getElementsByTagName("form")[0]
+                var psw = document.getElementsByName("pass")[0]
+                var cf = document.getElementsByName("ConfPass")[0]
+                if(psw.value !== cf.value) {
+                    cf.style.border = "1px solid red";
+                    return false;
+                }
+            }
+          </script>
+
+    </body>
+</html>
